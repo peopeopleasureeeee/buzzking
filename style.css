@@ -1,0 +1,103 @@
+/* Kode CSS Anda sebelumnya */
+
+body {
+    background-color: #1a0033; /* Warna ungu gelap */
+    color: #ffffff; /* Warna teks putih */
+    font-family: Arial, sans-serif;
+}
+
+/* --- CSS Baru untuk Header dan Logo --- */
+
+header {
+    display: flex;
+    justify-content: space-between; /* Untuk memisahkan logo dan navigasi */
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #0d001a; /* Latar belakang header lebih gelap */
+}
+
+.header-logo {
+    /* Kelas baru untuk mengatur ukuran logo */
+    height: 50px; /* Atur tinggi logo */
+    width: auto;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li a {
+    color: #e0b0ff;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+}
+
+.hero-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 100px 20px;
+    background-image: url('latar_belakang_hero.jpg'); /* Ganti dengan gambar latar belakang yang sesuai */
+    background-size: cover;
+}
+
+.hero-section h1 {
+    font-size: 3em;
+    color: #e0b0ff; /* Warna ungu muda */
+}
+
+button {
+    background-color: #8a2be2; /* Warna ungu */
+    color: white;
+    padding: 15px 30px;
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+}
+
+/* --- Kode CSS untuk Galeri Foto Baru --- */
+
+.image-gallery {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.image-gallery h2 {
+    color: #e0b0ff;
+    margin-bottom: 30px;
+    font-size: 2em;
+}
+
+.gallery-container {
+    display: flex;
+    /* Flex-wrap memastikan gambar turun ke baris baru jika ruang tidak cukup */
+    flex-wrap: wrap; 
+    gap: 20px; /* Jarak antar gambar */
+    justify-content: center; /* Memusatkan gambar di tengah */
+}
+
+.gallery-image {
+    width: 100%; /* Default untuk layar kecil */
+    max-width: 350px; /* Ukuran maksimum untuk setiap gambar */
+    height: auto;
+    border-radius: 10px; /* Sudut membulat */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Bayangan untuk efek 3D */
+    transition: transform 0.3s ease-in-out; /* Transisi saat di-hover */
+}
+
+.gallery-image:hover {
+    transform: scale(1.05); /* Memperbesar sedikit saat di-hover */
+}
+
+/* Media query untuk tampilan di layar yang lebih lebar */
+@media (min-width: 768px) {
+    .gallery-image {
+        /* Memastikan setiap gambar memiliki lebar yang sama di layar besar */
+        flex-basis: calc(33.333% - 20px); 
+    }
+}
